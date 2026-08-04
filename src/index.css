@@ -1,0 +1,179 @@
+@import "tailwindcss";
+@import "katex/dist/katex.min.css";
+
+:root {
+  --bg-color: #0B0E14;
+  --panel-bg: #1A1E27;
+  --panel-bg-translucent: rgba(26, 30, 39, 0.92);
+  --border-color: #2A303A;
+  --primary-teal: #00F2FE;
+  --primary-teal-glow: rgba(0, 242, 254, 0.35);
+  --secondary-lime: #00FF8C;
+  --secondary-lime-glow: rgba(0, 255, 140, 0.35);
+  --vector-red: #FF4646;
+  --text-color: #A9B2BC;
+  --text-light: #D5DDE6;
+  --font-main: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', 'Courier New', Courier, monospace;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--font-main);
+  user-select: none;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0D1117;
+}
+::-webkit-scrollbar-thumb {
+  background: #252D3A;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #00F2FE;
+}
+
+/* Custom Futuristic Sliders */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  background: transparent;
+  cursor: pointer;
+}
+
+input[type="range"]:focus {
+  outline: none;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 6px;
+  cursor: pointer;
+  background: #161B22;
+  border: 1px solid #2D333F;
+  border-radius: 3px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  background: var(--primary-teal);
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -6px;
+  box-shadow: 0 0 12px var(--primary-teal-glow), 0 0 4px #00F2FE;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 16px rgba(0, 242, 254, 0.8), 0 0 8px #00F2FE;
+}
+
+/* Glowing text classes */
+.glow-teal {
+  color: var(--primary-teal);
+  text-shadow: 0 0 8px var(--primary-teal-glow);
+}
+
+.glow-lime {
+  color: var(--secondary-lime);
+  text-shadow: 0 0 8px var(--secondary-lime-glow);
+}
+
+.glow-red {
+  color: var(--vector-red);
+  text-shadow: 0 0 8px rgba(255, 70, 70, 0.4);
+}
+
+/* Sci-Fi Canvas Background Grid */
+.bg-grid-pattern {
+  background-image: 
+    linear-gradient(to right, rgba(42, 48, 58, 0.25) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(42, 48, 58, 0.25) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.bg-grid-pattern-dense {
+  background-image: 
+    linear-gradient(to right, rgba(0, 242, 254, 0.07) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 242, 254, 0.07) 1px, transparent 1px);
+  background-size: 12px 12px;
+}
+
+/* Panel Border Glows */
+.panel-border {
+  border: 1px solid var(--border-color);
+  background-color: var(--panel-bg);
+}
+
+.panel-border-glow {
+  border: 1px solid rgba(0, 242, 254, 0.3);
+  box-shadow: 0 0 15px rgba(0, 242, 254, 0.08);
+}
+
+/* KaTeX Math Operator Styling & Bold Equal Signs */
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.floating-eq-panel .katex {
+  font-size: 0.9em !important;
+}
+
+.floating-eq-panel .katex-display {
+  margin: 0.2em 0 !important;
+}
+
+.floating-eq-panel .katex .mrel {
+  font-weight: 900 !important;
+  font-size: 1.15em !important;
+  padding: 0 4px !important;
+}
+
+.eq-panel-light .katex .mrel {
+  color: #0284C7 !important;
+}
+
+.eq-panel-dark .katex .mrel {
+  color: #38BDF8 !important;
+}
+
+.floating-eq-panel .katex .mbin {
+  font-weight: 800 !important;
+  font-size: 1.1em !important;
+  padding: 0 3px !important;
+}
+
+.floating-eq-panel .katex .frac-line {
+  border-bottom-width: 2.5px !important;
+  border-bottom-style: solid !important;
+  margin-top: 2px !important;
+  margin-bottom: 2px !important;
+}
+
+.eq-panel-light .katex .frac-line {
+  border-bottom-color: #0284C7 !important;
+}
+
+.eq-panel-dark .katex .frac-line {
+  border-bottom-color: #38BDF8 !important;
+}

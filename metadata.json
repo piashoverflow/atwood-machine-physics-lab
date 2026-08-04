@@ -1,0 +1,6 @@
+{
+  "name": "Universal Pulley Dynamics Lab",
+  "description": "High-fidelity interactive Udvash Academic Universal Pulley Dynamics Lab simulation with real-time force vectors, active state probe, step-by-step math cards, kinematics plots, and multi-system configuration controls.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
