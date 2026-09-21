@@ -6,3 +6,24 @@ coverage/
 *.log
 .env*
 !.env.example
+
+# Security & Credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.cert
+credentials.json
+secrets/
+private/
+
+# Dependencies & Build Outputs
+node_modules/
+dist/
+build/
+coverage/
+*.log
+.DS_Store
+.vscode/
+.idea/
